@@ -29,13 +29,12 @@ const SignIn = () => {
 
       if (data.token) {
         localStorage.setItem("token", data.token);
-        alert("Token saved: " + data.token);
+        
         
       }
       if (data.userId) {
         localStorage.setItem("userId", data.userId);
-        alert("UserId saved: " + data.userId);
-
+        
       }
       alert("Login Successful..!");
       navigate("/home");

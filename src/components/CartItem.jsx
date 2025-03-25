@@ -20,9 +20,9 @@ const CartItem = ({item}) => {
       
       const token=localStorage.getItem("token");
       dispatch(updateQuantity({_id:_id,newQuantity}));
-      console.log("local quantity to send :",newQuantity);
+      
       const response=await axios.post("https://ecart-backend-2.onrender.com/cart/update",{_id,name,selectedSize,quantity:newQuantity}, { headers: { Authorization: `Bearer ${token}` } });
-      console.log("response after update ",response);
+      
       if (response.data.success) {
         dispatch(updateQuantity({ _id, localQuantity: newQuantity }));
       } else {
