@@ -62,7 +62,7 @@ const App = () => {
       path:"/orders",
       element:<Orders/>
     }
-  ])
+  ],{ basename: "/" })
  
     return (
      <Provider store={appStore}>
