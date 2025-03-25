@@ -15,7 +15,7 @@ const LoginPage = () => {
     }
     const handleGoogleSignIn=(e)=>{
       e.preventDefault(); 
-      window.open("https://ecart-backend-2.onrender.com/auth/google", "_self");
+      navigate("https://ecart-backend-2.onrender.com/auth/google");
     }
   return (
     <div className="bg-gray-100 flex justify-center items-center min-h-screen px-4  ">
