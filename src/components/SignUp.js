@@ -20,7 +20,7 @@ const SignUp = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData), 
       });
-      alert("request sent")
+      
     alert(response.status)
 
       if (!response.ok) {
@@ -31,11 +31,11 @@ const SignUp = () => {
 
       if (data.token) {
         localStorage.setItem("token", data.token);
-        alert("Token saved: " + data.token);
+        
       }
       if (data._id) {
         localStorage.setItem("userId", data._id);
-        alert("UserId saved: " + data._id);
+        
       }
       alert("Registration Successful..!");
       navigate("/")
